@@ -11,5 +11,21 @@ Implementar:
 [ ] avisos sonoros
     - frase
     - som de alerta
-[ ] timer visual
-[ ]
+[ ] timer visual (cronômetro, linha de progresso)
+[ ] música de fundo mario
+[ ] desenhos / animações / jogos / fotos: mario, cuphead, baby looney tunes, bob esponja, minecraft, ana, cezar, miguel, vovô, colegas, priscila
+
+```bash
+# comandos usados
+
+# ambiente com node
+docker build -t lembretes-js-app .
+docker run -it --rm --name lembretes-jp-running-app -v "$PWD":/home/app lembretes-js-app
+
+# comandos para gerar css com tailwindcss
+npx tailwindcss -o tailwind.css
+npx tailwindcss init
+npx tailwindcss -c tailwind.config.js -o tailwind.css
+
+
+```
