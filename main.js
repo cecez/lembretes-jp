@@ -59,7 +59,8 @@ window.onload = function() {
     // carrega json com imagens
     fetch("imagens.json")
     .then(res => res.json())
-    .then(data => imagens = data);
+    .then(data => imagens = data)
+    .catch(erro => imagens.push('mario.webp'));
 
     // falador
     var synth = window.speechSynthesis;
@@ -84,6 +85,9 @@ window.onload = function() {
         // desabilitar botão
         desabilitaBotao();
 
+        // frase inicial
+
+
         setInterval(function() {
 
             var fraseDaVez = frases[getRandomIntInclusive(0, frases.length - 1)];
@@ -103,11 +107,11 @@ window.onload = function() {
             imagemTag.src = caminhoBaseImagens + imagens[getRandomIntInclusive(0, imagens.length - 1)];
 
             // toca alerta sonoro e frase
-            play(audioTag.src).then(function() {
+            //play(audioTag.src).then(function() {
                 synth.speak(utterThis)
-            });
+            //});
             
-        }, 20000);
+        }, 10000);
         
     }
 
