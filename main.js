@@ -45,6 +45,15 @@ var frases = [
 
 var imagens = [];
 
+function piscaTela() {
+    console.log("Piscar tela");
+}
+
+function desabilitaBotao() {
+    botao.classList.add('opacity-50');
+    botao.classList.add('cursor-not-allowed');
+}
+
 window.onload = function() {
 
     // carrega json com imagens
@@ -73,6 +82,7 @@ window.onload = function() {
     botao.onclick = function() {
 
         // desabilitar botão
+        desabilitaBotao();
 
         setInterval(function() {
 
