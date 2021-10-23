@@ -27,5 +27,7 @@ npx tailwindcss -o tailwind.css
 npx tailwindcss init
 npx tailwindcss -c tailwind.config.js -o tailwind.css
 
+# gerar JSON com imagens salvas
+node geraImagens
 
 ```
