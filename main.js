@@ -107,7 +107,7 @@ window.onload = function() {
                 synth.speak(utterThis)
             });
             
-        }, 5000);
+        }, 20000);
         
     }
 
