@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/cecez/public_html/comejp2    
+    - /bin/cp -R imagens $DEPLOYPATH
+    - /bin/cp -R sons $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp main.js $DEPLOYPATH
+    - /bin/cp tailwind.css $DEPLOYPATH
+    - /bin/cp imagens.json $DEPLOYPATH
