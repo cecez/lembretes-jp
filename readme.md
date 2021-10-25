@@ -20,7 +20,7 @@ Implementar:
 
 # ambiente com node
 docker build -t lembretes-js-app .
-docker run -it --rm --name lembretes-jp-running-app -v "$PWD":/home/app lembretes-js-app
+docker run -it --rm --name lembretes-jp-running-app -p 8080:8080 -v "$PWD":/home/app lembretes-js-app
 
 # comandos para gerar css com tailwindcss
 npx tailwindcss -o tailwind.css
@@ -29,5 +29,8 @@ npx tailwindcss -c tailwind.config.js -o tailwind.css
 
 # gerar JSON com imagens salvas
 node geraImagens
+
+# servidor http mínimo para nodejs
+npx http-server
 
 ```

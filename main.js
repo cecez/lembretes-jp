@@ -69,12 +69,12 @@ window.onload = function() {
     var texto = "João Pedro Leal Rosa, você está comendo?";
 
     var utterThis = new SpeechSynthesisUtterance(texto);
-    utterThis.voice = voices[0];
+    utterThis.voice = voices.filter((a,b) => a.name == 'Luciana')[0];
     utterThis.pitch = 1;
     utterThis.rate = 1;
 
     // tags de referência
-    var audioTag = document.querySelector('#audio');
+    //var audioTag = document.querySelector('#audio');
     const caminhoBaseImagens = 'imagens/';
     var imagemTag = document.querySelector('#imagem');
     var textoTag = document.querySelector('#texto');
@@ -86,6 +86,8 @@ window.onload = function() {
         desabilitaBotao();
 
         // frase inicial
+        utterThis.text = "Oba! João Pedro começou a comer!";
+        synth.speak(utterThis);
 
 
         setInterval(function() {
@@ -111,7 +113,7 @@ window.onload = function() {
                 synth.speak(utterThis)
             //});
             
-        }, 10000);
+        }, 5000);
         
     }
 
